@@ -78,22 +78,18 @@
 
 
                 $("#TakeCare").click(function(){
-                    HowrseSupporterUtils.InProgress();
                     HowrseSupporterMain.TakeCare(false);
                 });
 
                 $("#TakeTraining").click(function(){
-                    HowrseSupporterUtils.InProgress();
                     HowrseSupporterMain.TakeTraining(false, false);
                 });
 
                 $("#TakeTrainingAll").click(function(){
-                    HowrseSupporterUtils.InProgress();
                     HowrseSupporterMain.TakeTraining(true, false);
                 });
 
                 $('#takeRefresh').click(function(){
-                    HowrseSupporterUtils.InProgress();
                     HowrseSupporterUtils.RefreshRedEnergy();
                 });
 
@@ -183,58 +179,6 @@
             }, 400)
 
         },
-
-
-        // takeCareTest: function(ShouldTakeTraining){
-        //     execWhenReady(function(){
-        //         HowrseSupporterUtils.JustFeed(1);
-        //         setTimeout(function() {
-        //             execWhenReady(function(){$('#form-do-stroke').submit()});
-        //             setTimeout(function() {
-        //                 execWhenReady(function(){$('#form-do-drink').submit()});
-        //                 setTimeout(function(){
-        //                     execWhenReady(function(){$("#form-do-suckle").submit()});
-        //                     setTimeout(function() {
-        //                         execWhenReady(function(){$('#form-do-groom').submit()});
-        //                         setTimeout(function() {
-        //                             execWhenReady(function(){$("#form-do-night").submit()});
-        //                             setTimeout(function() {
-        //                                 let marchewy = 0;
-        //                                 $('#center-tab-main img').each(function(index) {
-        //                                     if ($(this).attr('src') == '/media/equideo/image/produits/20/carotte.png') {
-        //                                         marchewy++
-        //                                     }
-        //                                 });
-        //                                 if (marchewy == 1) {
-        //                                     execWhenReady(function(){$('#form-do-eat-treat-carotte').submit()});
-        //                                 };
-        //                                 setTimeout(function() {
-        //                                     let mieszanki = 0;
-        //                                     $('#center-tab-main img').each(function(index) {
-        //                                         if ($(this).attr('src') == "/media/equideo/image/produits/20/mash.png") {
-        //                                             mieszanki++
-        //                                         }
-        //                                     });
-        //                                     if (mieszanki == 1) {
-        //                                         execWhenReady(function(){$('#form-do-eat-treat-mash').submit()});
-        //                                     }
-
-        //                                     setTimeout(function(){
-        //                                         if (ShouldTakeTraining){
-        //                                             HowrseSupporterMain.TakeTraining(false, true);
-        //                                         } else {
-        //                                             execWhenReady(function(){$('#takeRefresh').click()});
-        //                                         }
-        //                                     }, 600)
-        //                                 }, 500)
-        //                             }, 500)
-        //                         }, 800)
-        //                     }, 400)
-        //                 }, 400)
-        //             }, 400)
-        //         }, 400)
-        //     })
-        // },
 
         TakeTraining: function(ShouldTakeCare, ShouldSwitchHorse){
             var t;
@@ -387,43 +331,6 @@
                 return true;
             }
         },
-
-
-
-        // NOT USED FOR NOW
-        CheckIfInProgress: function(toCall, argums){
-            var fnstring = toCall;
-            var fnparams = argums;
-            var fn = HowrseSupporterMain[fnstring];
-            var fn2 = HowrseSupporterUtils[fnstring];
-            var callfn;
-            if (fn){
-                if (typeof fn === "function") callfn = fn;
-            } else if (fn2){
-                if (typeof fn2 === "function") callfn = fn2;;
-            }
-
-            var x = setInterval(function(){
-                if (!(window.isInProgress)){
-                    HowrseSupporterUtils.InProgress();
-                    callfn.apply(null, fnparams);
-                    HowrseSupporterUtils.clearChecking();
-                }
-            }, 1000)
-        },
-
-        InProgress: function(){
-            window.isInProgress = true;
-        },
-
-        StopProgress: function(){
-            window.isInProgress = false;
-        },
-
-        ClearChecking: function(interval){
-            clearInterval(interval)
-        },
-
 
         OpenConfigMenu: function(){
             GM_config.open();
