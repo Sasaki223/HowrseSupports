@@ -1,49 +1,6 @@
-    // START THE SCRIPT
-    execWhenReady(function(){Start();});
-    // START THE SCRIPT
+     // <td colspan="1"><div style="font-size:10px;display:none"><input type="checkbox" id="SwitchHorseWhenDone"><label for="SwitchHorseWhenDone" checked> Zmienic konia?</label></div>
 
-
-
-
-    // ALL THE SCRIPT THINGS
-
-    function Start(){
-        GM_config.init({
-                'id': 'MyConfig',
-                'title': 'Ustawienia',
-                'fields':
-                {
-                    'Name': // This is the id of the field
-                    {
-                        'label': 'Name', // Appears next to field
-                        'type': 'text', // Makes this setting a text field
-                        'default': 'Sizzle McTwizzle' // Default value if user doesn't change it
-                    }
-                }
-        });
-
-
-        $("<style>.slider-style-0 li.blue.energ::after, .slider-style-0 li.green.energ::after { background-image: url('https://i.imgur.com/aHxVybt.png'); }</style> ").appendTo("head");
-        $("<style>.slider-style-1 li.blue.energ::after, .slider-style-0 li.green.energ::after { background-image: url('https://i.imgur.com/aHxVybt.png'); }</style> ").appendTo("head");
-        $("<style>.table-customo {width:100%;}</style>").appendTo("head");
-        $("<style>.table-customo tbody tr td {text-align:center;}</style>").appendTo("head");
-        $("<style>.table-customo tbody tr td div {text-align:center; margin:5px;}</style>").appendTo("head");
-
-        HowrseSupporterMain.addUtilities();
-        HowrseSupporterUtils.RefreshRedEnergy();
-
-        HowrseSupporterUtils.CatchUFO();
-
-    };
-
-
-
-
-
-
-    // <td colspan="1"><div style="font-size:10px;display:none"><input type="checkbox" id="SwitchHorseWhenDone"><label for="SwitchHorseWhenDone" checked> Zmienic konia?</label></div>
-
-    var HowrseSupporterMain = {
+     var HowrseSupporterMain = {
         addUtilities: function(){
             if($('#personnalisation')){
                 $('#care-head-title').parent().prepend(`
@@ -335,3 +292,50 @@
         }
         // NOT USED FOR NOW
     }
+ 
+ 
+ 
+ 
+ // START THE SCRIPT
+    execWhenReady(function(){Start();});
+    // START THE SCRIPT
+
+
+
+
+    // ALL THE SCRIPT THINGS
+
+    function Start(){
+        GM_config.init({
+                'id': 'MyConfig',
+                'title': 'Ustawienia',
+                'fields':
+                {
+                    'Name': // This is the id of the field
+                    {
+                        'label': 'Name', // Appears next to field
+                        'type': 'text', // Makes this setting a text field
+                        'default': 'Sizzle McTwizzle' // Default value if user doesn't change it
+                    }
+                }
+        });
+
+
+        $("<style>.slider-style-0 li.blue.energ::after, .slider-style-0 li.green.energ::after { background-image: url('https://i.imgur.com/aHxVybt.png'); }</style> ").appendTo("head");
+        $("<style>.slider-style-1 li.blue.energ::after, .slider-style-0 li.green.energ::after { background-image: url('https://i.imgur.com/aHxVybt.png'); }</style> ").appendTo("head");
+        $("<style>.table-customo {width:100%;}</style>").appendTo("head");
+        $("<style>.table-customo tbody tr td {text-align:center;}</style>").appendTo("head");
+        $("<style>.table-customo tbody tr td div {text-align:center; margin:5px;}</style>").appendTo("head");
+
+        HowrseSupporterMain.addUtilities();
+        HowrseSupporterUtils.RefreshRedEnergy();
+
+        HowrseSupporterUtils.CatchUFO();
+
+    };
+
+
+
+
+
+
