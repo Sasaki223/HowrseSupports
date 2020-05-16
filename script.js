@@ -426,7 +426,7 @@
 
 
         OpenConfigMenu: function(){
-
+            GM_config.open();
         }
         // NOT USED FOR NOW
     }
