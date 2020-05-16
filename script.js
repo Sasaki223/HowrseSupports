@@ -8,8 +8,6 @@
     // ALL THE SCRIPT THINGS
 
     function Start(){
-        window.isInProgress = false;
-
         GM_config.init({
                 'id': 'MyConfig',
                 'title': 'Ustawienia',
