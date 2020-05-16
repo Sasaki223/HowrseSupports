@@ -13,7 +13,7 @@
 
                         <tbody>
                             <tr>
-                                <td colspan="2"><div id="takeConfig" style="cursor: pointer;color:#2980b9;border:1px solid rgb(255, 255, 255);border-radius:10px 10px 10px 10px;padding:9px;background:linear-gradient(to top,rgb(86, 196, 244),rgb(146, 246, 247));font-size:12px;">Ustawienia</div></td>
+                                <td colspan="1"><div id="takeConfig" style="cursor: pointer;color:#2980b9;border:1px solid rgb(255, 255, 255);border-radius:10px 10px 10px 10px;padding:9px;background:linear-gradient(to top,rgb(86, 196, 244),rgb(146, 246, 247));font-size:12px;">Ustawienia</div></td>
                                 <td colspan="1"><div id="takeRefresh" style="cursor: pointer;color:#2980b9;border:1px solid rgb(255, 255, 255);border-radius:10px 10px 10px 10px;padding:9px;background:linear-gradient(to top,rgb(86, 196, 244),rgb(146, 246, 247));font-size:12px;">Odśwież czerwone</div></td>
                             </tr>
 
