@@ -13,7 +13,7 @@
 
                         <tbody>
                             <tr>
-                                <td colspan="1"><div id="takeConfig" style="cursor: pointer;color:#2980b9;border:1px solid rgb(255, 255, 255);border-radius:10px 10px 10px 10px;padding:9px;background:linear-gradient(to top,rgb(86, 196, 244),rgb(146, 246, 247));font-size:12px;">Ustawienia</div></td>
+                                <td colspan="2"><div id="takeConfig" style="cursor: pointer;color:#2980b9;border:1px solid rgb(255, 255, 255);border-radius:10px 10px 10px 10px;padding:9px;background:linear-gradient(to top,rgb(86, 196, 244),rgb(146, 246, 247));font-size:12px;">Ustawienia</div></td>
                                 <td colspan="1"><div id="takeRefresh" style="cursor: pointer;color:#2980b9;border:1px solid rgb(255, 255, 255);border-radius:10px 10px 10px 10px;padding:9px;background:linear-gradient(to top,rgb(86, 196, 244),rgb(146, 246, 247));font-size:12px;">Odśwież czerwone</div></td>
                             </tr>
 
@@ -311,11 +311,28 @@
                 'title': 'Ustawienia',
                 'fields':
                 {
-                    'Name': // This is the id of the field
+                    'ToSwitch': // This is the id of the field
                     {
-                        'label': 'Name', // Appears next to field
-                        'type': 'text', // Makes this setting a text field
-                        'default': 'Sizzle McTwizzle' // Default value if user doesn't change it
+                        'label': '[Opcja: Wszystko] Przełączyć konia na następnego po zakończeniu?', // Appears next to field
+                        'section': '[Opcja: Wszystko]',
+                        'type': 'checkbox', // Makes this setting a text field
+                        'default': false // Default value if user doesn't change it
+                    },
+
+                    'ToFeed':
+                    {
+                        'label': '[Opcja: Trening] Karmić owsem po zakończeniu treningu?',
+                        'section': '[Opcja: Trening]',
+                        'type': 'checkbox',
+                        'default': true
+                    },
+
+                    'DelayTime':
+                    {
+                        'label': '[Opcja: Opieka] Odstęp czasowy pomiędzy kliknięciami przyisków',
+                        'section': '[Opcja: Opieka]',
+                        'type': 'int',
+                        'default': 400
                     }
                 }
         });
